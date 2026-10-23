@@ -278,3 +278,24 @@ html.touch a,
 html.touch button {
 	-webkit-tap-highlight-color: transparent;
 }
+
+/* Mobile: never let the page pan sideways. iOS Safari can shift the visual
+   viewport horizontally when wide inner tracks (marquee, culture rows, the
+   WebGPU stage) exist, exposing the body background as a strip on the right. */
+html.touch,
+html.touch body {
+	overflow-x: clip;
+	max-width: 100%;
+	overscroll-behavior-x: none;
+}
+
+html.touch .scroll-root {
+	overflow-x: clip;
+	touch-action: pan-y pinch-zoom;
+}
+
+html.touch .scroll-content {
+	width: 100%;
+	max-width: 100vw;
+	overflow-x: clip;
+}

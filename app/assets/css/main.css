@@ -1,0 +1,275 @@
+@layer theme, base, components;
+
+@import 'tailwindcss/theme.css' layer(theme);
+@import 'tailwindcss/preflight.css' layer(base);
+@import 'tailwindcss/utilities.css';
+
+@theme {
+	--spacing: 0.1rem;
+
+	--breakpoint-s: 650px;
+	--breakpoint-l: 1400px;
+
+	--color-black: #0f0e0c;
+	--color-white: #fcfaf5;
+	--color-orchid: #e154ff;
+
+	--color-shade: #f1eee6;
+
+	--color-raised: #ffffff;
+
+	--color-ground: var(--color-white);
+	--color-ink: var(--color-black);
+	--color-accent: var(--color-orchid);
+
+	--color-line: rgb(0 0 0 / 10%);
+
+	--font-sans: 'Host Grotesk', ui-sans-serif, system-ui, sans-serif;
+
+	--font-mono: 'Sometype Mono', ui-monospace, monospace;
+
+	--leading-9: 0.9;
+	--leading-10: 1;
+	--leading-11: 1.1;
+	--leading-12: 1.2;
+	--leading-125: 1.25;
+
+	--tracking-display: -0.04em;
+	--tracking-h2: -0.03em;
+	--tracking-lede: -0.02em;
+
+	--tracking-body: -0.02em;
+
+	--tracking-label: var(--tracking-body);
+
+	--container-measure: 60rem;
+
+	--ease-out: ease-out;
+	--ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+	--ease-snappy: linear(0, 0.0191, 0.062, 0.1566, 0.3378, 0.5335, 0.6892, 0.8, 0.8686, 0.912, 0.9469, 0.964, 0.9741, 0.981, 0.9859, 0.9896, 0.9923, 0.9946, 0.9961, 0.9976, 0.9984, 0.9991, 0.9996, 0.9998, 1);
+}
+
+@utility text-* {
+	font-size: calc(var(--spacing) * --value(integer));
+}
+
+@utility rounded-* {
+	border-radius: calc(var(--spacing) * --value(integer));
+}
+
+@utility site-grid {
+	display: grid;
+	grid-template-columns: repeat(4, minmax(0, 1fr));
+	column-gap: 1.5rem;
+	align-content: start;
+
+	@variant s {
+		grid-template-columns: repeat(12, minmax(0, 1fr));
+		column-gap: 2rem;
+	}
+}
+
+@custom-variant gpu (html.has-gpu &);
+
+@custom-variant has-hover (@media (hover: hover) and (pointer: fine));
+
+@custom-variant touch (html.touch &);
+
+html.touch,
+html.touch body {
+	overflow: hidden;
+	height: 100%;
+}
+
+html.touch body {
+	background: var(--color-ground);
+}
+
+html.touch .scroll-root {
+	position: fixed;
+	inset: calc(var(--pad, 0px) * -1) 0;
+	padding-block: var(--pad, 0px);
+	scroll-padding-block: var(--pad, 0px);
+	overflow-x: hidden;
+	overflow-y: auto;
+
+	overscroll-behavior-y: none;
+
+	-webkit-overflow-scrolling: touch;
+}
+
+html.touch .scroll-content {
+	position: relative;
+	min-height: 100%;
+}
+
+@font-face {
+	font-family: 'Host Grotesk';
+	src: url('/fonts/HostGrotesk-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Host Grotesk';
+	src: url('/fonts/HostGrotesk-Medium.woff2') format('woff2');
+	font-weight: 500;
+	font-display: swap;
+}
+
+@font-face {
+	font-family: 'Sometype Mono';
+	src: url('/fonts/SometypeMono-Regular.woff2') format('woff2');
+	font-weight: 400;
+	font-display: swap;
+}
+
+@property --open {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0;
+}
+
+@property --gl-hover {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0;
+}
+
+@property --gl-warp {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0;
+}
+
+@property --stick {
+	syntax: '<number>';
+	inherits: false;
+	initial-value: 0;
+}
+
+@property --gl-slide {
+	syntax: '<number>';
+	inherits: false;
+	initial-value: 0;
+}
+
+@property --gl-warp-size {
+	syntax: '<length>';
+	inherits: true;
+	initial-value: 140px;
+}
+
+@property --gl-warp-speed {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 1;
+}
+
+@property --gl-px {
+	syntax: '<length>';
+	inherits: true;
+	initial-value: 0px;
+}
+
+@property --gl-py {
+	syntax: '<length>';
+	inherits: true;
+	initial-value: 0px;
+}
+
+@property --gl-pull {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0;
+}
+
+@property --gl-seam-noise {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0.22;
+}
+
+@property --gl-seam-light {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: #fcfaf5;
+}
+
+@property --gl-seam-stroke {
+	syntax: '<color>';
+	inherits: true;
+	initial-value: transparent;
+}
+
+@property --gl-seam-mask {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0;
+}
+
+@property --gl-mx {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0.5;
+}
+
+@property --gl-my {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0.5;
+}
+
+@property --gl-spread {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0.25;
+}
+
+@property --gl-swirl {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0.08;
+}
+
+@property --gl-lens {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0.9;
+}
+
+@property --gl-bulge {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0.5;
+}
+
+@property --gl-zoom {
+	syntax: '<number>';
+	inherits: true;
+	initial-value: 0.05;
+}
+
+:root {
+	--size: 390;
+}
+
+@media (width >= 650px) {
+	:root {
+		--size: 1440;
+	}
+}
+
+html {
+	font-size: clamp(4.5px, calc((100vw / var(--size)) * 10), 12px);
+	font-family: var(--font-sans);
+	background-color: var(--color-ground);
+	color: var(--color-ink);
+	-webkit-font-smoothing: antialiased;
+	scrollbar-gutter: stable;
+}
+
+body {
+	line-height: var(--leading-12);
+	letter-spacing: var(--tracking-body);
+}

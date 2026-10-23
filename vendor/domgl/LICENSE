@@ -1,0 +1,14 @@
+Copyright (c) 2026 Jesper Landberg. All rights reserved.
+
+The domgl layer (@lama/domgl) is proprietary and is NOT open source. It is included here in
+compiled form only so that this site can be built, and no license to use,
+copy, modify, or distribute it — in whole or in part, in this project or any
+other — is granted.
+
+The Basis Universal transcoder under domgl/assets/basis is third-party
+software under the Apache License 2.0; its own LICENSE and NOTICE are beside
+it, and nothing above applies to it.
+
+The WGSL function paperDot in index.js is ported from @paper-design/shaders
+(Apache License 2.0). Nothing above applies to it either; see
+THIRD-PARTY-NOTICES.md at the root of this repository.

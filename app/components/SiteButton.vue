@@ -3,7 +3,7 @@
 		:is="to ? 'a' : 'button'"
 		:href="to"
 		:type="to ? undefined : 'button'"
-		class="btn relative flex h-40 w-fit shrink-0 items-center justify-center gap-60 overflow-hidden bg-black px-15"
+		class="btn relative flex h-44 w-fit s:h-40 shrink-0 items-center justify-center gap-60 overflow-hidden bg-black px-15"
 	>
 		<span class="font-mono text-12 leading-10 font-normal tracking-label uppercase text-white">{{ label }}</span>
 

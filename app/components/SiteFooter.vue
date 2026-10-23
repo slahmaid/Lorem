@@ -1,24 +1,24 @@
 <template>
-	<footer id="contact" class="relative flex w-full flex-col items-start overflow-hidden px-20 s:px-120">
+	<footer id="contact" class="relative flex w-full flex-col items-start overflow-hidden px-20 pb-[env(safe-area-inset-bottom)] s:px-120 s:pb-0">
 		<div class="bg-line h-px w-full shrink-0" />
 
 		<div ref="inner" class="flex w-full flex-col items-start will-change-transform">
 		<div class="flex w-full flex-col items-start justify-between gap-60 pt-80 pb-40 s:flex-row s:pt-120 s:pb-80">
 			<div class="flex flex-wrap items-start gap-x-60 gap-y-40 s:flex-nowrap s:gap-x-120">
-				<div v-for="group in GROUPS" :key="group.title" class="flex flex-col items-start gap-30">
+				<div v-for="group in GROUPS" :key="group.title" class="flex flex-col items-start gap-15 s:gap-30">
 					<gl-text
 						tag="span"
 						class="shrink-0 font-mono text-12 leading-10 font-normal tracking-label text-ink/60 uppercase"
 					>{{ group.title }}</gl-text>
 
-					<div class="flex flex-col items-start gap-15">
+					<div class="flex flex-col items-start gap-0 s:gap-15">
 						<gl-text
 							v-for="link in group.links"
 							:key="link.label"
 							tag="a"
 							:href="link.id ? `#${link.id}` : '#'"
 							:data-dummy="link.id ? undefined : ''"
-							class="text-ink shrink-0 font-mono text-12 leading-10 font-normal tracking-label uppercase transition-opacity duration-350 ease-out has-hover:hover:opacity-60"
+							class="text-ink flex min-h-44 shrink-0 items-center font-mono text-12 leading-10 s:block s:min-h-0 font-normal tracking-label uppercase transition-opacity duration-350 ease-out has-hover:hover:opacity-60"
 							@click="go($event, link.id)"
 						>{{ link.label }}</gl-text>
 					</div>

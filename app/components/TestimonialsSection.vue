@@ -34,17 +34,17 @@
 						<gl-solid class="bg-raised pointer-events-none absolute inset-0" />
 
 						<div class="flex items-center gap-30">
-							<span class="w-50 shrink-0 font-mono text-12 leading-10 font-normal tracking-label uppercase tabular-nums">{{ counter }}</span>
+							<span class="w-40 shrink-0 font-mono s:w-50 text-12 leading-10 font-normal tracking-label uppercase tabular-nums">{{ counter }}</span>
 
 							<div class="bg-line relative h-px w-full overflow-hidden">
 								<div ref="fill" class="bg-ink absolute inset-y-0 left-0 w-full origin-left" />
 								<div ref="flush" class="bg-ink absolute inset-y-0 left-0 w-full origin-right" />
 							</div>
 
-							<div class="flex shrink-0 items-center gap-10">
+							<div class="flex shrink-0 items-center gap-8 s:gap-10">
 								<button
 									type="button"
-									class="bg-ink flex size-20 items-center justify-center text-raised transition-opacity duration-350 ease-out has-hover:cursor-pointer has-hover:hover:opacity-70"
+									class="bg-ink flex size-44 items-center s:size-20 justify-center text-raised transition-opacity duration-350 ease-out has-hover:cursor-pointer has-hover:hover:opacity-70"
 									aria-label="Previous testimonial"
 									@click="previous"
 								>
@@ -55,7 +55,7 @@
 
 								<button
 									type="button"
-									class="bg-ink flex size-20 items-center justify-center text-raised transition-opacity duration-350 ease-out has-hover:cursor-pointer has-hover:hover:opacity-70"
+									class="bg-ink flex size-44 items-center s:size-20 justify-center text-raised transition-opacity duration-350 ease-out has-hover:cursor-pointer has-hover:hover:opacity-70"
 									aria-label="Next testimonial"
 									@click="next"
 								>
@@ -75,7 +75,7 @@
 							>
 								<p
 									:ref="(el: unknown) => setBlock(i, 0, el)"
-									class="w-full max-w-[60rem] text-28 leading-12 font-medium text-pretty tracking-h2 text-ink capitalize"
+									class="w-full max-w-[60rem] text-22 leading-12 font-medium s:text-28 text-pretty tracking-h2 text-ink capitalize"
 								>{{ item.quote }}</p>
 
 								<p

@@ -1,5 +1,5 @@
 <template>
-	<nav class="fixed inset-x-0 top-0 z-10 flex justify-center p-20 text-black s:p-40">
+	<nav class="fixed inset-x-0 top-0 z-10 flex justify-center p-20 pt-[max(2rem,env(safe-area-inset-top))] text-black s:p-40">
 		<div ref="bar" class="bar flex items-center justify-between">
 			<span class="wordmark shrink-0 text-16 leading-12 font-medium tracking-body">
 				Chlah<span class="stop">.</span>

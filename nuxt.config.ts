@@ -39,7 +39,7 @@ export default defineNuxtConfig({
 			noscript: [{ innerHTML: '<style>[data-curtain]{display:none}</style>' }],
 			title: 'Chlah',
 			meta: [
-				{ name: 'viewport', content: 'width=device-width, initial-scale=1' },
+				{ name: 'viewport', content: 'width=device-width, initial-scale=1, viewport-fit=cover' },
 				{ name: 'description', content: 'Chlah — design studio portfolio.' },
 			],
 			link: [`${base}fonts/HostGrotesk-Regular.woff2`, `${base}fonts/HostGrotesk-Medium.woff2`].map((href) => ({

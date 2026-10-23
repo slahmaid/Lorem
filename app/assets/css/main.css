@@ -273,3 +273,8 @@ body {
 	line-height: var(--leading-12);
 	letter-spacing: var(--tracking-body);
 }
+
+html.touch a,
+html.touch button {
+	-webkit-tap-highlight-color: transparent;
+}

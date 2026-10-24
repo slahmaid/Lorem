@@ -58,7 +58,7 @@ const burst = (x: number, y: number) => {
 		el.animate(frames, { duration: life * 1000, easing: 'linear', fill: 'forwards' }).finished.then(remove, remove)
 	}
 
-	said.value = 'This is just a demo'
+	said.value = 'Coming soon'
 
 	clearTimeout(quiet)
 	quiet = window.setTimeout(() => { said.value = '' }, 1500)

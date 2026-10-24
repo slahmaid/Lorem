@@ -23,10 +23,10 @@
 import { SpringSet } from '@domgl/motion'
 
 const CELLS = [
-	{ src: 'project-01', title: 'Project title', square: true },
-	{ src: 'project-02', title: 'Project title', square: false },
-	{ src: 'project-02', title: 'Project title', square: false },
-	{ src: 'project-01', title: 'Project title', square: true },
+	{ src: 'project-01', title: 'Atelier Noir — E-commerce, 2026', square: true },
+	{ src: 'project-02', title: 'Forma — Web Design, 2026', square: false },
+	{ src: 'project-03', title: 'Kinetic — Art Direction, 2025', square: false },
+	{ src: 'project-04', title: 'Oro — Brand & Web, 2025', square: true },
 ]
 
 const ROWS = [CELLS.slice(0, 2), CELLS.slice(2, 4)]

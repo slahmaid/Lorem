@@ -26,8 +26,10 @@
 import { Spring } from '@domgl/motion'
 
 const LINKS = [
-	{ id: 'projects', label: 'Projects' },
-	{ id: 'culture', label: 'Culture' },
+	{ id: 'projects', label: 'Work' },
+	{ id: 'about', label: 'About' },
+	{ id: 'services', label: 'Services' },
+	{ id: 'contact', label: 'Contact' },
 ]
 
 const ON = 60

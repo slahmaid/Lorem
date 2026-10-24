@@ -84,6 +84,40 @@
 			"1184": "/tx/v1/project-02-1184.ktx2"
 		}
 	},
+	"project-03": {
+		"w": 1184,
+		"h": 880,
+		"widths": {
+			"400": "/img/project-03-400.webp",
+			"800": "/img/project-03-800.webp",
+			"1200": "/img/project-03-1184.webp",
+			"1600": "/img/project-03-1184.webp",
+			"2200": "/img/project-03-1184.webp",
+			"3000": "/img/project-03-1184.webp"
+		},
+		"ktx2": {
+			"400": "/tx/v1/project-03-400.ktx2",
+			"800": "/tx/v1/project-03-800.ktx2",
+			"1184": "/tx/v1/project-03-1184.ktx2"
+		}
+	},
+	"project-04": {
+		"w": 880,
+		"h": 1184,
+		"widths": {
+			"400": "/img/project-04-400.webp",
+			"800": "/img/project-04-800.webp",
+			"1200": "/img/project-04-880.webp",
+			"1600": "/img/project-04-880.webp",
+			"2200": "/img/project-04-880.webp",
+			"3000": "/img/project-04-880.webp"
+		},
+		"ktx2": {
+			"400": "/tx/v1/project-04-400.ktx2",
+			"800": "/tx/v1/project-04-800.ktx2",
+			"880": "/tx/v1/project-04-880.ktx2"
+		}
+	},
 	"testimonial-01": {
 		"w": 896,
 		"h": 1200,

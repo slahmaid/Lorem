@@ -1,8 +1,8 @@
 <template>
-	<section id="culture" class="flex scroll-mt-80 flex-col gap-30 pt-20 pb-40 s:scroll-mt-120 s:pt-40 s:pb-80">
+	<section id="about" class="flex scroll-mt-80 flex-col gap-30 pt-20 pb-40 s:scroll-mt-120 s:pt-40 s:pb-80">
 		<div class="flex flex-col gap-30 px-20 s:px-120">
 			<div class="flex items-center gap-40">
-				<gl-text tag="span" class="shrink-0 font-mono text-12 leading-10 font-normal tracking-label uppercase">Culture</gl-text>
+				<gl-text tag="span" class="shrink-0 font-mono text-12 leading-10 font-normal tracking-label uppercase">About</gl-text>
 
 				<div class="bg-line h-px w-full" />
 			</div>
@@ -11,14 +11,14 @@
 				<gl-text
 					tag="h2"
 					class="shrink-0 text-50 leading-9 font-medium tracking-display s:text-80 s:leading-10"
-				>Ping pong tables<br>and stuff.</gl-text>
+				>Design with<br>intention.</gl-text>
 
 				<div class="flex w-full max-w-[50rem] flex-col items-start gap-30 s:pt-5">
 					<gl-text tag="p" class="text-ink/60 w-full pb-15 text-20 leading-125 tracking-lede capitalize">
-						lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua, ut enim ad minim veniam quis nostrud exercitation.
+						I'm Chlah, an independent designer working across brand identity, web and digital design. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
 					</gl-text>
 
-					<site-button label="Join the team" data-dummy />
+					<site-button label="Let's work together" to="mailto:hello@example.com" />
 				</div>
 			</div>
 		</div>

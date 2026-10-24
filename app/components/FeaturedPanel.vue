@@ -10,7 +10,7 @@
 
 			<div ref="world" class="absolute top-0 left-0 h-screen w-screen touch:static touch:h-auto touch:w-auto">
 				<div ref="content" class="absolute inset-x-0 top-0 flex flex-col gap-40 pt-80 pb-20 text-white touch:static s:gap-80 s:pt-160 s:pb-40">
-					<site-marquee text="Featured projects" />
+					<site-marquee text="Selected work" />
 					<featured-grid />
 				</div>
 			</div>

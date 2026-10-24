@@ -5,7 +5,7 @@
 		<div ref="inner" class="flex w-full flex-col items-start will-change-transform">
 		<div class="flex w-full flex-col items-start justify-between gap-60 pt-80 pb-40 s:flex-row s:pt-120 s:pb-80">
 			<div class="flex flex-wrap items-start gap-x-60 gap-y-40 s:flex-nowrap s:gap-x-120">
-				<div v-for="group in GROUPS" :key="group.title" class="flex flex-col items-start gap-15 s:gap-30">
+				<div v-for="group in GROUPS" :id="group.id" :key="group.title" class="flex flex-col items-start gap-15 s:gap-30">
 					<gl-text
 						tag="span"
 						class="shrink-0 font-mono text-12 leading-10 font-normal tracking-label text-ink/60 uppercase"
@@ -16,8 +16,8 @@
 							v-for="link in group.links"
 							:key="link.label"
 							tag="a"
-							:href="link.id ? `#${link.id}` : '#'"
-							:data-dummy="link.id ? undefined : ''"
+							:href="link.href ?? (link.id ? `#${link.id}` : '#')"
+							:data-dummy="link.id || link.href ? undefined : ''"
 							class="text-ink flex min-h-44 shrink-0 items-center font-mono text-12 leading-10 s:block s:min-h-0 font-normal tracking-label uppercase transition-opacity duration-350 ease-out has-hover:hover:opacity-60"
 							@click="go($event, link.id)"
 						>{{ link.label }}</gl-text>
@@ -52,12 +52,12 @@
 </template>
 
 <script setup lang="ts">
-type Link = { label: string; id?: string }
+type Link = { label: string; id?: string; href?: string }
 
-const GROUPS: { title: string; links: Link[] }[] = [
-	{ title: 'Navigation', links: [{ label: 'Projects', id: 'projects' }, { label: 'Culture', id: 'culture' }, { label: 'Join the team' }] },
-	{ title: 'Legal', links: [{ label: 'Privacy' }, { label: 'Cookies' }, { label: 'Terms' }] },
-	{ title: 'Contact', links: [{ label: 'hello@example.com' }] },
+const GROUPS: { title: string; id?: string; links: Link[] }[] = [
+	{ title: 'Navigation', links: [{ label: 'Work', id: 'projects' }, { label: 'About', id: 'about' }, { label: 'Services', id: 'services' }, { label: 'Contact', id: 'contact' }] },
+	{ title: 'Services', id: 'services', links: [{ label: 'Brand identity' }, { label: 'Web design' }, { label: 'UI/UX design' }, { label: 'Art direction' }] },
+	{ title: 'Contact', links: [{ label: 'hello@example.com', href: 'mailto:hello@example.com' }, { label: 'Instagram' }, { label: 'Behance' }, { label: 'Dribbble' }, { label: 'LinkedIn' }] },
 ]
 
 const { $scrollTo, $write } = useNuxtApp()

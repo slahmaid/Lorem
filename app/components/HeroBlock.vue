@@ -10,6 +10,12 @@
 				class="shrink-0 text-60 leading-9 font-medium tracking-h2 s:text-175"
 			>Chlah</gl-text>
 		</div>
+
+		<div class="pointer-events-none absolute inset-x-20 bottom-20 flex flex-col items-center gap-10 text-center s:inset-x-40 s:bottom-40 s:flex-row s:items-end s:justify-between s:text-left">
+			<gl-text tag="p" class="font-mono text-12 leading-10 font-normal tracking-label uppercase">Independent designer &amp; studio</gl-text>
+
+			<gl-text tag="p" class="font-mono text-12 leading-10 font-normal tracking-label text-ink/60 uppercase">Brand identity, web and digital design</gl-text>
+		</div>
 	</section>
 </template>
 

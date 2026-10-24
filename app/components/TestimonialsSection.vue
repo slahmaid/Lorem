@@ -11,7 +11,7 @@
 				<div class="bg-line h-px w-full" />
 			</div>
 
-			<site-marquee text="Client Confessions" />
+			<site-marquee text="Kind words" />
 
 			<div class="mt-30 px-20 s:px-120">
 				<article
@@ -108,7 +108,7 @@ const QUOTES = [
 	{
 		quote: 'Quisque fermentum dolor sapien, sed lacinia arcu gravida sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum, sapien vel faucibus sollicitudin, arcu risus pharetra mauris, ornare feugiat eros diam non risus.',
 		name: '- Client Name, Founder',
-		image: 'project-01',
+		image: 'project-03',
 	},
 	{
 		quote: 'Arcu risus pharetra mauris, ornare feugiat eros diam non risus. Quisque fermentum dolor sapien, sed lacinia arcu gravida sit amet, consectetur adipiscing elit.',
@@ -118,7 +118,7 @@ const QUOTES = [
 	{
 		quote: 'Sed lacinia arcu gravida sit amet. Lorem ipsum dolor sit amet, consectetur adipiscing elit. In elementum, sapien vel faucibus sollicitudin, arcu risus pharetra mauris, ornare feugiat eros diam non risus. Quisque fermentum dolor sapien.',
 		name: '- Client Name, Partner',
-		image: 'project-02',
+		image: 'project-04',
 	},
 	{
 		quote: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ornare feugiat eros diam non risus, arcu risus pharetra mauris, sed lacinia arcu gravida sit amet.',
